@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOEIC スタディブック — レベル別 目標スコア達成アプリ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <h1>📘 TOEIC スタディブック</h1>
+      <span id="header-badge" class="header-badge hidden"></span>
+    </div>
+    <nav class="tabs">
+      <button id="tab-home" class="tab active" onclick="show('home')">🏠 ホーム</button>
+      <button id="tab-diag" class="tab" onclick="show('diag')">🩺 診断テスト</button>
+      <button id="tab-practice" class="tab" onclick="show('practice')">📝 問題演習</button>
+      <button id="tab-ai" class="tab" onclick="show('ai')">🤖 AI問題生成</button>
+      <button id="tab-plan" class="tab" onclick="show('plan')">✅ 学習課題</button>
+      <button id="tab-record" class="tab" onclick="show('record')">📊 記録</button>
+      <button id="tab-nlm" class="tab" onclick="show('nlm')">📓 NotebookLM活用</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="view-home"></section>
+    <section id="view-diag" class="hidden"></section>
+    <section id="view-practice" class="hidden"></section>
+    <section id="view-ai" class="hidden"></section>
+    <section id="view-plan" class="hidden"></section>
+    <section id="view-record" class="hidden"></section>
+    <section id="view-nlm" class="hidden"></section>
+  </main>
+
+  <footer class="app-footer">
+    <p>レベル基準は IIBC「TOEIC Program各テストスコアとCEFRとの対照表」「PROFICIENCY SCALE」を参考に作成したオリジナル教材です。<br>
+    問題はすべて本アプリのオリジナル問題であり、実際の TOEIC 過去問ではありません。データはこの端末(ブラウザ)にのみ保存されます。</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/gemini.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
